@@ -27,7 +27,7 @@ Create a database name :db_covid19 and add the following collection for scraping
 4. SPA Layer : Use angular's packages and 
 
 # Authors 
-BRIKA SOUMAIA (githup) []
-EL KRYECH NADA (githup) [NadaELKRYECH]
+BRIKA SOUMAIA () 
+EL KRYECH NADA [githup] (NadaELKRYECH) 
 
 
