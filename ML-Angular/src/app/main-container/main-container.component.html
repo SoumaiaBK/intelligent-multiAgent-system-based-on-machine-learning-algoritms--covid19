@@ -1,0 +1,222 @@
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+
+    <!-- |____________________________________________________________________________________________________| -->
+<div class="topnav" id="myTopnav">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <i class="fa fa-align-right"></i>
+    </button>
+    <span style="font-size : 2em; padding-left:10px; padding-top:10px" class="main-color"></span>
+  </div>
+  <div>
+    <a class="fa fa-pie-chart" aria-hidden="true"></a><a (click)="ChangeSelector('Visualisation')" href="#">Data Visualisation</a>
+    <a class="fa fa-tasks" aria-hidden="true"></a><a (click)="ChangeSelector('Scrapping')" href="#"> Scrapping</a>
+    <a class="fa fa-users" aria-hidden="true"></a><a (click)="ChangeSelector('Clusters')" href="#">Clustering</a>
+    <a class="fa fa-line-chart" aria-hidden="true"></a><a (click)="ChangeSelector('Prediction')" href="#">Prédiction</a>
+  </div>
+</div>
+
+<section style="min-height : 762px;" id="contents">
+
+    <!-- |__________________________________________________ Bienvenue __________________________________________________| -->
+  <div class="welcome">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="content">
+            <h2>Bienvenue sur Dashboard Covid 19</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <!-- |__________________________________________________ Data Visualisation __________________________________________________| -->
+  <div *ngIf=" selector == 'Visualisation' "> 
+    <section class='statis text-center'>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="box danger">
+              <h3>{{nDeaths}}</h3>
+              <p class="lead"> Nombre de décès</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="box warning">
+              <h3>{{nCases}}</h3>
+              <p class="lead">Nombre de cas</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="box success">
+              <h3>{{nCured}}</h3>
+              <p class="lead">Nombre de guéris</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="charts">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <div style="background-color: #D9E4EC;" class="chart-container">
+              <canvas id="myChart1"></canvas>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div style="background-color: #D9E4EC;" class="chart-container">
+              <canvas id="myChart2"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="charts">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <div style="background-color: #D9E4EC;" class="chart-container">
+              <canvas id="myChart3"></canvas>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div style="background-color: #D9E4EC;" class="chart-container">
+              <canvas id="myChart4"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+ 
+  </div>
+
+  <!-- |__________________________________________________ Clustering ___________________________________________________________| -->
+  <div *ngIf=" selector == 'Clusters'">
+    <section style="padding-bottom:100px"  class="charts">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-9">
+            <div style="background-color: #EDF2F3; margin-left:150px; width:100%"  class="chart-container">
+              <h3 style="color : #434343">Clustering</h3>
+              <canvas id="Clusters"></canvas>
+            </div>
+          </div>
+          </div>
+      </div>
+    </section>
+  </div>
+
+
+  <!-- |__________________________________________________ Scrapping ___________________________________________________________| -->
+  <div *ngIf=" selector == 'Scrapping'">
+
+      <section class="charts">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div   class="chart-container">
+              <h3 style="font-weight:bolder; color:white" >Scrapping : </h3>
+              <div style="display:flex;" >
+                <div style="padding-top: 12px; margin-right:12px">
+                    Entrer le nombre des pages Scrapping : 
+                </div>
+                <div>
+                  <mat-slider                
+                  thumbLabel
+                  (change)="setPagesNumber($event )"
+                  [displayWith]="formatLabel"
+                  tickInterval="100"
+                   style="width:550px"
+                  min="1"
+                  max="6000"></mat-slider>
+                </div>
+              </div>
+              <div style="display:flex; justify-content: space-between" >
+               
+                <div style="padding-top: 9px">
+                  <button (click)="scrapping_news()" style="color:#0c6980;background-color:white; width:100px; height:30px" mat-raised-button color="primary">Scrapping </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+      </div>
+    </section>
+
+    <section class="charts">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div   class="chart-container">
+              <h3 style="font-weight:bolder; color:white" >Analyse des sentiments : </h3>
+              <div style="display:flex;" >
+                <div style="padding-top: 12px; margin-right:12px">
+                    Sélectiooner le nombre des nouvelles : 
+                </div>
+                <div>
+                  <mat-slider                
+                  thumbLabel
+                  (change)="setNewsNumber($event )"
+                  [displayWith]="formatLabel"
+                  tickInterval="100"
+                   style="width:550px"
+                  min="1"
+                  max="6000"></mat-slider>
+                </div>
+              </div>
+              <div style="display:flex; justify-content: space-between" >
+                <div style="display:flex;">
+                  <div style="padding-top: 12px; margin-left:12px;margin-right:5px; font-weight:800">
+                    Negative
+                  </div>
+                  <mat-slide-toggle (change)="setPositiveValue($event )"  style="padding-top: 12px;"> Positive</mat-slide-toggle>
+                </div>
+                <div style="padding-top: 9px">
+                  <button (click)="getNews()" style="color:#0c6980;background-color:white; width:100px; height:30px" mat-raised-button color="primary">Get </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+      </div>
+    </section>
+
+    <table style="background-color:white; width:90%; margin:auto; margin-top:40px" class="table table-hover">
+      <thead class="thead-dark">
+        <tr>
+
+          <th scope="col">Les nouvelles : </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of dataNews; let i = index">
+          <td>{{item.Titre}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+<!-- |__________________________________________________ Prediction ___________________________________________________________| -->
+<div *ngIf=" selector == 'Prediction'">
+
+  <section style="padding-bottom:100px"  class="charts">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-9">
+          <div style="background-color: #EDF2F3; margin-left:150px; width:100%"  class="chart-container">
+            <h3 style="color : #434343">Prédiction</h3>
+            <canvas id="prediction"></canvas>
+          </div>
+        </div>
+        </div>
+    </div>
+  </section>
+</div>
+
+
+<script src="mainContainer.js"></script>
+</section>
+
