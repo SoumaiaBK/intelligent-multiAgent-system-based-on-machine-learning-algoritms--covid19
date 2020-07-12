@@ -28,6 +28,7 @@ Create a database name :db_covid19 and add the following collection for scraping
 
 # Authors 
 BRIKA SOUMAIA [githup](https://github.com/SoumaiaBK)
+
 EL KRYECH NADA [githup](https://github.com/NadaELKRYECH) 
 
 
