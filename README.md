@@ -1,6 +1,6 @@
-# intelligent multi-agent system based on several supervised and unsupervised learning algorithms
+# intelligent multi-agent system based on several supervised and unsupervised machine learning algorithms
 # Objectif
-The main objective of the project is the realization of an intelligent multi-agent system based on several supervised and unsupervised learning algorithms so that the system is composed of several intelligent and interactive agents, from which each agent performs a specific task.
+The main objective of the project is the realization of an intelligent multi-agent system based on several supervised and unsupervised machine learning algorithms so that the system is composed of several intelligent and interactive agents, from which each agent performs a specific task.
 In addition to a Single page Application which will interact with the system in order to visualize all the tasks performed by our agents throughout the machine learning process by the different algorithms.
 
 # Built With
