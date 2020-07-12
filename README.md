@@ -5,7 +5,7 @@ In addition to a Single page Application which will interact with the system in 
 
 # Built With
 Our project is based on:
-- BDD:MongoDB to store the data 
+- BDD : MongoDB to store the data 
 - Smart Layer: Flask Framework to build APi’s. for MasLayer
 - MAS Layer: Springboot Framework to build APi’s for front-end layer 
 - JADE Platefrome: to implement agents and interact with the system using machine learning algorithms.
@@ -27,7 +27,7 @@ Create a database name :db_covid19 and add the following collection for scraping
 4. SPA Layer : Use angular's packages and 
 
 # Authors 
-BRIKA SOUMAIA
-EL KRYECH NADA 
+BRIKA SOUMAIA (githup) []
+EL KRYECH NADA (githup) [NadaELKRYECH]
 
 
