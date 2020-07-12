@@ -18,13 +18,13 @@ Our project is based on:
 # The steps to follow to work with 
 1. Mongo db : install it from https://docs.mongodb.com/manual/installation/
 Create a database name :db_covid19 and add the following collection for scraping storing data :  NewsScrapped/ Scraping_data2/ Scraping_data1
-2. Smart layer: 
+2. Smart layer : 
 - Install beautiful soup for scraping script from https://pypi.org/project/beautifulsoup4/#files
 - Install sklearn to use Machine learning algorithms scripts for clustering and predictiong modeling.
 - Install flair modeling using pytorch to use sentiment anlysis
 - Install chart.js for datavisualization from https://www.chartjs.org/docs/latest/getting-started/installation.html
 3. MAS layer : Dowmload jade.jar from https://jade.tilab.com/
-4. SPA Layer : Use angular's packages and 
+4. SPA Layer : Use angular's packages and Angular Material
 
 # Authors 
 BRIKA SOUMAIA [githup](https://github.com/SoumaiaBK)
