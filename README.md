@@ -1,6 +1,5 @@
-# Système multi-agents intelligents basé sur les algorithmes d’apprentissage 
- Système multi-agents intelligents basé sur les algorithmes d’apprentissage 
-##Objectif
+# intelligent multi-agent system based on several supervised and unsupervised learning algorithms
+# Objectif
 The main objective of the project is the realization of an intelligent multi-agent system based on several supervised and unsupervised learning algorithms so that the system is composed of several intelligent and interactive agents, from which each agent performs a specific task.
 In addition to a Single page Application which will interact with the system in order to visualize all the tasks performed by our agents throughout the machine learning process by the different algorithms.
 
@@ -27,6 +26,8 @@ Create a database name :db_covid19 and add the following collection for scraping
 3. MAS layer : Dowmload jade.jar from https://jade.tilab.com/
 4. SPA Layer : Use angular's packages and 
 
-Authors :
+# Authors 
+BRIKA SOUMAIA
+EL KRYECH NADA 
 
 
