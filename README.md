@@ -14,7 +14,7 @@ Our project is based on:
 - Angular: Framework for Front-end Layer
 
 # Modelization and Architecture project 
-![picture](img/architecture.PNG)
+![picture](architecture.PNG)
 
 # The steps to follow to work with 
 1. Mongo db : install it from https://docs.mongodb.com/manual/installation/
